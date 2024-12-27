@@ -6,7 +6,6 @@ authors = ["Michael Yermonsky <mikeyermonsky@yahoo.com>"]
 
 [dependencies]
 
-
 [profile.dev]
 panic = "abort"
 
