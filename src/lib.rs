@@ -54,7 +54,6 @@ pub fn test_runner(tests: &[&dyn Testable]) {
     for test in tests {
         test.run();
     }
-
     exit_qemu(QemuExitCode::Success);
 }
 
