@@ -60,3 +60,13 @@ fn many_boxes() {
         assert_eq!(*x, i);
     }
 }
+
+#[test_case]
+fn many_boxes_long_living() {
+    let long_living = Box::new(1);
+    for i in 0..HEAP_SIZE {
+        let x = Box::new(i);
+        assert_eq!(*x, i);
+    }
+    assert_eq!(*long_living, 1);
+}
