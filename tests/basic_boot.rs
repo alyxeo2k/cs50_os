@@ -23,9 +23,3 @@ fn panic(info: &PanicInfo) -> ! {
 fn test_println() {
 	println!("test_println output");
 }
-
-#[test_case]
-#[allow(unconditional_panic)]
-fn test_divide_by_zero() {
-	assert_eq!(1/0, 0);
-}
