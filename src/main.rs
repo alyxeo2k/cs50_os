@@ -4,23 +4,18 @@
 #![test_runner(cs50_os::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
+use bootloader::{entry_point, BootInfo};
 use core::panic::PanicInfo;
 use cs50_os::println;
 
-#[no_mangle]
-pub extern "C" fn _start() -> ! {
+entry_point!(main);
+
+fn main(_boot_info: &'static BootInfo) -> ! {
     println!("Hello World{}", "!");
     println!("HII!!!!");
 
     cs50_os::init();
 
-    use x86_64::registers::control::Cr3;
-
-    let (level_4_page_table, _) = Cr3::read();
-    println!(
-        "level_4_page_table at: {:?}",
-        level_4_page_table.start_address()
-    );
     #[cfg(test)]
     test_main();
 
