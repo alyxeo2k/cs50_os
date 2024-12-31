@@ -13,7 +13,7 @@ use cs50_os::allocator::HEAP_SIZE;
 
 entry_point!(main);
 
-fn main(boot_info: &'static BootInfo) -> ! {
+pub fn main(boot_info: &'static BootInfo) -> ! {
     use cs50_os::{
         allocator,
         memory::{self, BootInfoFrameAllocator},

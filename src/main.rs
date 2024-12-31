@@ -57,6 +57,15 @@ fn main(boot_info: &'static BootInfo) -> ! {
     cs50_os::hlt_loop();
 }
 
+async fn async_num() -> u32 {
+    42
+}
+
+async fn example_task() {
+    let number = async_num().await;
+    println!("async num: {}", number);
+}
+
 #[cfg(not(test))]
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
