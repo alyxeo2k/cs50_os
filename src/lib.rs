@@ -17,6 +17,7 @@ pub mod interrupts;
 pub mod memory;
 pub mod serial;
 pub mod vga_buffer;
+pub mod task;
 
 extern crate alloc;
 
@@ -26,6 +27,7 @@ pub enum QemuExitCode {
     Success = 0x10,
     Failed = 0x11,
 }
+
 
 pub trait Testable {
     fn run(&self) -> ();
