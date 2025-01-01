@@ -1,5 +1,5 @@
 # CS50 OS
-#### Video Demo:
+#### Video Demo: https://youtu.be/eKqq8RmQK8M
 #### Description
 CS50 OS is a simple, bare-metal compatable Operating System Kernel based entirely on Rust!
 Built on Rust, CS50 OS uses no standard libraries from rust_std, instead impletementing (most of) the most essential elements of an Operating System. Following the amazing tutorial by Philipp Oppermann ([Blog_os](https://os.phil-opp.com)), I wrote the entire Operating System Kernel with the help of his tutorial.
@@ -22,7 +22,7 @@ CS50 OS Includes the following elements:
 
 # File descriptions
 ## main.rs
-> main.rs is what starts up everything else in the system, right after the hardware boot sequence finishes. For example it creates a panic handler for the case that something goes wrong anywhere (when panic! is called), It is also where the memory is initialized with allocator::init_heap, and where it is tested.
+> main.rs is what starts up everything else in the system, right after the hardware boot sequence finishes. For example it creates a panic handler for the case that something goes wrong anywhere (when panic! is called), It is also where the memory is initialized with `allocator::init_heap`, and where it is tested.
 ## lib.rs
 > lib.rs is where everything is defined, like a .h header file for C++ users. More specifically, its where QemuExitCode is defined (So qemu can exit with the correct code, because qemu see any code that isnt 0, as a failure), and the test_runner is defined here, which is the function that automatically runs all the tests within the "tests" folder.
 lib.rs also links to all the other modules that are a part of the kernel like the vga_buffer driver, interrupts handler, etc.
