@@ -1,7 +1,7 @@
 # CS50 OS
 #### Video Demo:
 #### Description
-#(Made as a final project for the CS50x Edx course)
+(Made as a final project for the CS50x Edx course)\n
 CS50 OS is a simple, bare-metal compatable Operating System Kernel based entirely on Rust!
 Built on Rust, CS50 OS uses no standard libraries from rust_std, instead impletementing (most of) the most essential elements of an Operating System. Following the amazing tutorial by Philipp Oppermann ([Blog_os](https://os.phil-opp.com)), I wrote the entire Operating System Kernel with the help of his tutorial.
 
