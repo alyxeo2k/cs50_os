@@ -1,12 +1,9 @@
-use bump::BumpAllocator;
-use linked_list_allocator::LockedHeap;
 use x86_64::{
     structures::paging::{
         mapper::MapToError, FrameAllocator, Mapper, Page, PageTableFlags, Size4KiB,
     },
     VirtAddr,
 };
-use linked_list::LinkedListAllocator;
 use fixed_size_block::FixedSizeBlockAllocator;
 
 pub mod bump;

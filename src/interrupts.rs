@@ -1,5 +1,5 @@
 use crate::hlt_loop;
-use crate::{gdt, print, println};
+use crate::{gdt, println};
 use lazy_static::lazy_static;
 use pic8259::ChainedPics;
 use spin;

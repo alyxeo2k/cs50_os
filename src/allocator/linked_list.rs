@@ -2,7 +2,6 @@ use core::{mem, ptr};
 use super::Locked;
 use linked_list_allocator::align_up;
 use alloc::alloc::{GlobalAlloc, Layout};
-use pc_keyboard::layouts;
 
 pub struct LinkedListAllocator {
     head: ListNode,

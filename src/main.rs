@@ -6,7 +6,7 @@
 
 use bootloader::{entry_point, BootInfo};
 use core::panic::PanicInfo;
-use cs50_os::{println, task::{Task, simple_executor::SimpleExecutor}};
+use cs50_os::{println, task::{Task, executor::Executor, keyboard}};
 
 extern crate alloc;
 
@@ -50,15 +50,16 @@ fn main(boot_info: &'static BootInfo) -> ! {
         Rc::strong_count(&cloned_reference)
     );
 
-    let mut executor = SimpleExecutor::new();
+    let mut executor = Executor::new();
     executor.spawn(Task::new(example_task()));
+    executor.spawn(Task::new(keyboard::print_keypresses()));
     executor.run();
 
     #[cfg(test)]
     test_main();
 
-    println!("It did not crash");
-    cs50_os::hlt_loop();
+    // println!("It did not crash");
+    // cs50_os::hlt_loop();
 }
 
 async fn async_num() -> u32 {
