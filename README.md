@@ -1,25 +1,24 @@
 # CS50 OS
 #### Video Demo:
 #### Description
-(Made as a final project for the CS50x Edx course)\n
 CS50 OS is a simple, bare-metal compatable Operating System Kernel based entirely on Rust!
 Built on Rust, CS50 OS uses no standard libraries from rust_std, instead impletementing (most of) the most essential elements of an Operating System. Following the amazing tutorial by Philipp Oppermann ([Blog_os](https://os.phil-opp.com)), I wrote the entire Operating System Kernel with the help of his tutorial.
 
-CS50 OS Includes the following elements:
-    - A bootable Binary disk image (You can even put it on a usb and boot it on bare-metal!)
-    - VGA Text display for displaying text to the screen
-    - Testing support using the rust testing framework
-    - Panic handling
-    - CPU Exceptions/Interrupts
-    - Double/Page fault handling
-    - Hardware Interrupts (Keyboard and timer)
-    - Memory paging support
-    - Heap allocation
-    - Bump allocation
-    - Linked list allocation
-    - Fixed-size block allocation (All interchangeable)
-    - Async/Await Multitasking support
-    - Plus smaller things such as printing and serial printing support.
+CS50 OS Includes the following elements\/
+- A bootable Binary disk image (You can even put it on a usb and boot it on bare-metal!)
+- VGA Text display for displaying text to the screen
+- Testing support using the rust testing framework
+- Panic handling
+- CPU Exceptions/Interrupts
+- Double/Page fault handling
+- Hardware Interrupts (Keyboard and timer)
+- Memory paging support
+- Heap allocation
+- Bump allocation
+- Linked list allocation
+- Fixed-size block allocation (All interchangeable)
+- Async/Await Multitasking support
+- Plus smaller things such as printing and serial printing support.
 All together making for quite a comprehensive set of features.
 
 # File descriptions
